@@ -8,8 +8,6 @@
 ![NumPy](https://img.shields.io/badge/NumPy-scientific-orange)
 ![Monte Carlo](https://img.shields.io/badge/Physics-Monte_Carlo-purple)
 
-# Physics SQL Lab
-
 A small scientific computing project for learning SQL, PostgreSQL, Python, testing, GitHub workflow, and CI/CD through computational physics examples.
 
 The first implemented model is a basic 2D Ising model. Simulation results are stored in a PostgreSQL database and can be queried later for analysis.
