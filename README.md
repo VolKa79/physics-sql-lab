@@ -1,5 +1,15 @@
 # Physics SQL Lab
 
+![Python](https://img.shields.io/badge/Python-3.12-blue)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-Database-blue)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-ORM-red)
+![Pytest](https://img.shields.io/badge/pytest-testing-green)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI-black)
+![NumPy](https://img.shields.io/badge/NumPy-scientific-orange)
+![Monte Carlo](https://img.shields.io/badge/Physics-Monte_Carlo-purple)
+
+# Physics SQL Lab
+
 A small scientific computing project for learning SQL, PostgreSQL, Python, testing, GitHub workflow, and CI/CD through computational physics examples.
 
 The first implemented model is a basic 2D Ising model. Simulation results are stored in a PostgreSQL database and can be queried later for analysis.
