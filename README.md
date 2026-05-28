@@ -116,3 +116,59 @@ Current columns:
 - Add Docker Compose
 - Add Streamlit dashboard
 - Later: add Bose-Hubbard or Fermi-Hubbard toy models
+
+- ## Monte Carlo temperature sweep
+
+This project includes a Metropolis Monte Carlo implementation of the 2D Ising model.
+The simulation can be run for multiple lattice sizes and temperatures. For each run, the measured physical observables are stored in a PostgreSQL database.
+
+Stored observables include:
+
+* mean energy per spin
+* energy standard deviation
+* mean magnetization per spin
+* mean absolute magnetization per spin
+* magnetization standard deviation
+* heat capacity
+* magnetic susceptibility
+
+The main idea is to avoid recomputing expensive simulations. Results are saved permanently in SQL tables and can later be reused for analysis and plotting.
+
+## Run temperature sweep
+
+```bash
+python src/run_temperature_sweep.py
+```
+
+## Load saved results
+
+```bash
+python src/analysis/load_ising_results.py
+```
+
+## Plot magnetization
+
+```bash
+python src/analysis/plot_magnetization.py
+```
+
+## Current database table
+
+The main Monte Carlo results are stored in:
+
+```text
+ising_mc_results
+```
+
+This table contains simulation parameters, measured observables, and timestamps.
+
+## Scientific goal
+
+The project aims to reproduce basic finite-size behavior of the 2D Ising model near the critical temperature:
+
+```text
+Tc ≈ 2.269
+```
+
+Later extensions will include energy plots, heat capacity peaks, magnetic susceptibility, larger lattice sizes, cached runs, and more advanced statistical analysis.
+
